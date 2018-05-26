@@ -96,6 +96,7 @@ accuracy = tf.reduce_mean(tf.cast(correct_prediction,tf.float32))
 # setup the initialisation operator
 init_op = tf.global_variables_initializer()
 
+#Trained with tensorflow-gpu 
 with tf.Session(config=tf.ConfigProto(log_device_placement=False)) as sess:
     sess.run(init_op)
     total_batch = int(len(mnist.train.labels) / batch_size)
